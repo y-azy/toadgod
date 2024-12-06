@@ -1,4 +1,14 @@
-import{f as i,g as n,k as e,q as a,t as w}from"./chunk-JAUVA5AU.js";w();function r(t){return`
+import {
+  f as i,
+  g as n,
+  k as e,
+  q as a,
+  t as w
+} from "./chunk-JAUVA5AU.js";
+w();
+
+function r(t) {
+  return `
     /* Optimist Extra Light */
     @font-face {
       font-family: 'Optimist';
@@ -132,4 +142,48 @@ import{f as i,g as n,k as e,q as a,t as w}from"./chunk-JAUVA5AU.js";w();function
       font-weight: normal;
       font-style: normal;
     }
-  `}var l=class{static{this._StyleTagElId="__wb_font_loader"}static _GetHeadElementAsync(f){if(f.head)return n(f.head);let s=new i,o=new MutationObserver(m=>{for(let c of m)if(c.type==="childList"&&!(typeof f.head>"u")){o.disconnect(),s.next(f.head);break}});return o.observe(f,{childList:!0,subtree:!0}),s.asObservable()}static _CheckPlatformWillRun(){let f=new i;return chrome.runtime.onMessage.addListener((s,o)=>{s.type==="initFontStyles"&&o.id===chrome.runtime.id&&f.next(!0)}),f.asObservable()}static StyleTagInjected(f){return!!f?.getElementById(this._StyleTagElId)}static InjectFontStylesUnlessDuplicate(f){let s=f.ownerDocument;if(this.StyleTagInjected(s))return;let o=f.ownerDocument.createElement("style");o.id=this._StyleTagElId,o.innerHTML=r(this._RuntimeUrlGetter),f.appendChild(o)}static Init(f,s){this._RuntimeUrlGetter=s,e([this._GetHeadElementAsync(f),this._CheckPlatformWillRun()]).pipe(a(1)).subscribe(([o])=>{this.InjectFontStylesUnlessDuplicate(o)})}};export{l as a};
+  `
+}
+var l = class {
+  static {
+    this._StyleTagElId = "__wb_font_loader"
+  }
+  static _GetHeadElementAsync(f) {
+    if (f.head) return n(f.head);
+    let s = new i,
+      o = new MutationObserver(m => {
+        for (let c of m)
+          if (c.type === "childList" && !(typeof f.head > "u")) {
+            o.disconnect(), s.next(f.head);
+            break
+          }
+      });
+    return o.observe(f, {
+      childList: !0,
+      subtree: !0
+    }), s.asObservable()
+  }
+  static _CheckPlatformWillRun() {
+    let f = new i;
+    return chrome.runtime.onMessage.addListener((s, o) => {
+      s.type === "initFontStyles" && o.id === chrome.runtime.id && f.next(!0)
+    }), f.asObservable()
+  }
+  static StyleTagInjected(f) {
+    return !!f ? .getElementById(this._StyleTagElId)
+  }
+  static InjectFontStylesUnlessDuplicate(f) {
+    let s = f.ownerDocument;
+    if (this.StyleTagInjected(s)) return;
+    let o = f.ownerDocument.createElement("style");
+    o.id = this._StyleTagElId, o.innerHTML = r(this._RuntimeUrlGetter), f.appendChild(o)
+  }
+  static Init(f, s) {
+    this._RuntimeUrlGetter = s, e([this._GetHeadElementAsync(f), this._CheckPlatformWillRun()]).pipe(a(1)).subscribe(([o]) => {
+      this.InjectFontStylesUnlessDuplicate(o)
+    })
+  }
+};
+export {
+  l as a
+};

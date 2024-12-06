@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <!-- saved from url=(0012)about:srcdoc -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style>
-	html {
-		overflow: hidden;
-	}
+<html>
 
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
- 	}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style>
+		html {
+			overflow: hidden;
+		}
 
- 	iframe {
- 		max-width: 100%;
- 	}
-</style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		iframe {
+			max-width: 100%;
+		}
+	</style>
 </head>
-	<body data-new-gr-c-s-check-loaded="14.1210.0" data-gr-ext-installed=""> <video autoplay="" loop="" muted="" height="400" width="400">
-	<source src="https://assets.zyrosite.com/Yg25V2x6JviO83we/tobyworld-m7vkbpx8w6c9kjby-YNqrZJglaWuQKl8b.mp4
+
+<body data-new-gr-c-s-check-loaded="14.1210.0" data-gr-ext-installed=""> <video autoplay="" loop="" muted=""
+		height="400" width="400">
+		<source src="https://assets.zyrosite.com/Yg25V2x6JviO83we/tobyworld-m7vkbpx8w6c9kjby-YNqrZJglaWuQKl8b.mp4
 
 " type="video/mp4">
-</video>
-<script>
-	const throttle = (function_, time) => {
-		let wait = false;
+	</video>
+	<script>
+		const throttle = (function_, time) => {
+			let wait = false;
 
-		return function executedFunction() {
-			if (!wait) {
-				Reflect.apply(function_, this, arguments);
-				wait = true;
-				setTimeout(() => {
-					wait = false;
-				}, time);
-			}
+			return function executedFunction() {
+				if (!wait) {
+					Reflect.apply(function_, this, arguments);
+					wait = true;
+					setTimeout(() => {
+						wait = false;
+					}, time);
+				}
+			};
 		};
-	};
 
-	const heightObserver = new ResizeObserver(throttle(([{ contentRect }]) => {
-		window.parent.postMessage({ action: 'iframeHeightUpdated', height: document.documentElement.scrollHeight, id: 'zqTcIs' }, '*');
-	}), 1000);
+		const heightObserver = new ResizeObserver(throttle(([{
+			contentRect
+		}]) => {
+			window.parent.postMessage({
+				action: 'iframeHeightUpdated',
+				height: document.documentElement.scrollHeight,
+				id: 'zqTcIs'
+			}, '*');
+		}), 1000);
 
-	heightObserver.observe(document.documentElement);
-</script>
+		heightObserver.observe(document.documentElement);
+	</script>
 
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
-      div.grammarly-desktop-integration {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select:none;
-        user-select:none;
-      }
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
+		<style>
+			div.grammarly-desktop-integration {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
 
-      div.grammarly-desktop-integration:before {
-        content: attr(data-content);
-      }
-    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
+			div.grammarly-desktop-integration:before {
+				content: attr(data-content);
+			}
+		</style>
+		<div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
+			data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}">
+		</div>
+	</template></grammarly-desktop-integration>
+
+</html>
